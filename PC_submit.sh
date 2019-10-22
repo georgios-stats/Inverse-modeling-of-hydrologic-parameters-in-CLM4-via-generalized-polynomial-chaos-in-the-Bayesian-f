@@ -12,16 +12,13 @@ do
 	python ./Generate_measurements.py $MONTH > log_Generate_measurements_$MONTH
 	python ./Run_MCMC_BMA_L2.py $MONTH > log_Run_MCMC_BMA_L2_$MONTH
 	python ./Run_MCMC_MPM_L2.py $MONTH > log_Run_MCMC_MPM_L2_$MONTH
-	#python ./Run_LASSO.py $MONTH > log_Run_LASSO_$MONTH
 done
 
 python ./Run_Inverse_bma.py > log_Run_Inverse_bma
 python ./Run_Inverse_mpm.py > log_Run_Inverse_mpm
-#python ./Run_Inverse_LASSO.py > log_Run_Inverse_LASSO
 
 python ./Run_Validation_bma.py > Run_Validation_bma
 python ./Run_Validation_mpm.py > Run_Validation_mpm
-#python ./Run_Validation_LASSO.py > Run_Validation_LASSO
 
 
 
